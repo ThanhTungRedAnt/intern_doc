@@ -542,3 +542,18 @@ public ResponseEntity<List<NhanVienDTO>> getEmpNotSales() {
  - Kết quả:
 
 ![N|CSDL](./image/Postman.PNG)
+
+
+# Bài tập
+
+Chúng ta sẽ áp dụng các kiến thức trên vào việc tạo các API THÊM/SỬA/XÓA/TRUY VẤN/NATIVE SQL với các bảng còn lại trong bài EX03.
+
+  - KHACHHANG
+  - NHACUNGCAP
+  - LOAIHANG
+  - MATHANG
+  - DONDATHANG
+  - CHITIETDONDATHANG
+  
+# Tiếp theo
+Bài tiếp theo chúng ta sẽ học về Spring boot security, JWT
