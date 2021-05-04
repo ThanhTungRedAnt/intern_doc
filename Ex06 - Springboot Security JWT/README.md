@@ -1,4 +1,4 @@
-# Ex05: Spring boot - Spring security JWT
+# Ex06: Spring boot - Spring security JWT
 Create by: TungBT - Bui Thanh Tung <<04/05/2021>>
 
 ![N|Solid](https://stackjava.com/wp-content/uploads/2018/03/SPRING-BOOT-SECURITY-LOGO.jpg)
