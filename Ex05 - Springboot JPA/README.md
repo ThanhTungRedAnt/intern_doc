@@ -1,5 +1,5 @@
 # Ex05: Spring boot - Data JPA
-Create by: TungBT - Bui Thanh Tung <<22/05/2021>>
+Create by: TungBT - Bui Thanh Tung <<22/04/2021>>
 
 ![N|Solid](https://storyplank.com/storage/canvas/images/IvxP5AoHT9RMAcHxWNi2Vph4KW5qEdCntL0GY6wb.jpeg)
 
