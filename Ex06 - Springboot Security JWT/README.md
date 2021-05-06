@@ -451,27 +451,21 @@ public class JWTFilter extends GenericFilterBean {
             throws IOException, ServletException {
         // Lấy ra request
         HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
-        
+
         // Lấy ra chuỗi JWT trong header của request
         String jwt = resolveToken(httpServletRequest);
-        
+
         // Validate JWT Token
         if (StringUtils.hasText(jwt) && this.tokenProvider.validateToken(jwt)) {
             // Tạo Authentication từ chuỗi JWT
             Authentication authentication = this.tokenProvider.getAuthentication(jwt);
-            
-            // Set Authentication vào SecurityContextHolder: Thông báo với Spring Security là Authen thành công  
+
+            // Set Authentication vào SecurityContextHolder: Thông báo với Spring Security là Authen thành công
             SecurityContextHolder.getContext().setAuthentication(authentication);
-            
-            // Tiếp tục thực hiện request
-            filterChain.doFilter(servletRequest, servletResponse);
-        } else {
-            
-            // Khi JWT không hợp lệ, từ chối request ===> Trả về lỗi 401 SC_UNAUTHORIZED
-            HttpServletResponse response = (HttpServletResponse) servletResponse;
-            response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid token.");
-            return;
         }
+
+        // Tiếp tục thực hiện request
+        filterChain.doFilter(servletRequest, servletResponse);
     }
 
     private String resolveToken(HttpServletRequest request) {
